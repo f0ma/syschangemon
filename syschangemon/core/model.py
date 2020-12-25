@@ -67,6 +67,9 @@ class State(dict):
         res = State(model, None)
         for k, v in d.items():
             try:
+                # hack skip empty columns
+                if v is None:
+                    continue
                 # hack string timestamps back to datetime
                 if isinstance(v, str):
                     if len(v) < 100 and date_pat.match(v):

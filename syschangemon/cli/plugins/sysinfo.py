@@ -48,9 +48,9 @@ class SysInfoPlugin(StatePluginBase):
         res['release'] = release
         res['machine'] = machine
         res['processor'] = processor
-        res['linux_distname'] = platform.linux_distribution()[0]
-        res['linux_version'] = platform.linux_distribution()[1]
-        res['linuxid'] = platform.linux_distribution()[2]
+        #res['linux_distname'] = platform.linux_distribution()[0]
+        #res['linux_version'] = platform.linux_distribution()[1]
+        #res['linuxid'] = platform.linux_distribution()[2]
         return res
 
 

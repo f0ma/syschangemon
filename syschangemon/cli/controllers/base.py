@@ -373,7 +373,7 @@ class SysChangeMonBaseController(CementBaseController):
 
             print('report sent')
 
-        except OperationalError:
+        except (ConnectionRefusedError, OperationalError):
             print('no recent report')
 
         self.app.exit_code = 0

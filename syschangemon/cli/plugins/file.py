@@ -200,8 +200,6 @@ class FilePlugin(StatePluginBase):
         for pat in self.exclude:
             self.exclude_pats.append(globre.compile(pat, flags=globre.EXACT, split_prefix=False))
 
-        os.stat_float_times(True)
-
         if 'assume_nochange' in conf_keys:
             self.assume_nochange = [x.strip() for x in c.get(self._meta.label, 'assume_nochange').split(',')]
 
